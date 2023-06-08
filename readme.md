@@ -7,7 +7,7 @@ Provide a short description explaining the what, why, and how of your project. U
 - What problem does it solve?
 - What did you learn? -->
 
-- Third-party APIs allow developers to access their data and functionality by amking requests with specific parameters to a URL
+- Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL
 - Developers are often taksed wtih retrieving data from another application's API and using it in the context of their own
 - This project is to build a wather dashboard that will run in the browser and feature dynamicaly updated HTML and CSS. 
 ## Installation
