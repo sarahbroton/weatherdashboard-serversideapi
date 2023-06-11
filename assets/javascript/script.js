@@ -45,7 +45,8 @@ var loadSearchHistory = function() {
 
 // if no previous searches
 if (!savedSearchHistory) {
-    return false; 
+    console.log("no search history"); 
+    // return false; 
 }
 
 savedSearchHisotry = JSON.parse(savedSearchHIstory); 
@@ -61,7 +62,7 @@ var currentWeatherSection = function(cityName) {
     .then(function(response) {
         return response.json();
     })
-    .then(funtion(resopnse) {
+    .then(funtion(response) {
         var cityLon = response.coord.lon; 
         var cityLat = response.coord.lat; 
 
@@ -179,7 +180,7 @@ fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${cityLat}&lon=${city
 };
 
 // called when the search form is submitted
-$("#search-form").click("submit", function() {
+$("#search-form").click("submit", function()) {
 event.preventDefault();
 
 // get name of city searched
