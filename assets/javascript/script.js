@@ -1,5 +1,8 @@
 var apiKey = "aa5e670bb5114654ea08830ff27af01a"
 var savedSearches = []; 
+var cityName; 
+var savedSearchHistory; 
+
 
 // previous searches
 var searchHistoryList = function(cityName) {
@@ -49,7 +52,7 @@ if (!savedSearchHistory) {
     // return false; 
 }
 
-savedSearchHisotry = JSON.parse(savedSearchHIstory); 
+savedSearchHistory = JSON.parse(savedSearchHistory); 
 
 for (var i = 0; i < savedSearchHistory.length; i++) {
     searchHistoryList(savedSearchHIstory[i]); 
@@ -62,7 +65,7 @@ var currentWeatherSection = function(cityName) {
     .then(function(response) {
         return response.json();
     })
-    .then(funtion(response) {
+    .then(function(response) {
         var cityLon = response.coord.lon; 
         var cityLat = response.coord.lat; 
 
@@ -180,7 +183,7 @@ fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${cityLat}&lon=${city
 };
 
 // called when the search form is submitted
-$("#search-form").click("submit", function()) {
+$("#search-form").click("submit", function() {
 event.preventDefault();
 
 // get name of city searched
