@@ -53,6 +53,8 @@ if (!savedSearchHistory) {
 }
 
 savedSearchHistory = JSON.parse(savedSearchHistory); 
+// savedSearchHistory(); 
+
 
 for (var i = 0; i < savedSearchHistory.length; i++) {
     searchHistoryList(savedSearchHIstory[i]); 
