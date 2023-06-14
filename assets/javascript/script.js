@@ -43,27 +43,31 @@ $('#search-input').val("");
 // saved history to search
 var loadSearchHistory = function() {
     var savedSearchHistory = localStorage.getItem("savedSearches"); 
+    savedSearches = JSON.parse(savedSearchHistory);
 
 }
-
 // if no previous searches
 if (!savedSearchHistory) {
     console.log("no search history"); 
     // return false; 
 }
 
-savedSearchHistory = JSON.parse(savedSearchHistory); 
+// if (savedSearchHistory) {
+//     savedSearchHistory = []; 
+// }
+
+ 
 // savedSearchHistory(); 
+// savedSearchHistory = parseInt(savedSearchHistory); 
 
-
-for (var i = 0; i < savedSearchHistory.length; i++) {
-    searchHistoryList(savedSearchHIstory[i]); 
+for (var i = 0; i < savedSearches.length; i++) {
+    searchHistoryList(savedSearches[i]); 
 }
 
 // }; 
 
 var currentWeatherSection = function(cityName) {
-    fetch('https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={apiKey}')
     .then(function(response) {
         return response.json();
     })
