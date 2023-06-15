@@ -175,13 +175,13 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${cityLat}&lon=${cit
 };
 
 // called when the search form is submitted
-$("#search-form").click("submit", function(e) {
+$("#search-form").on("submit", function(e) {
 e.preventDefault();
 
 // get name of city searched
 var cityName = $("#search-input").val();
 
-if (cityName === "") {
+if (cityName === "" || cityName == null) {
 //send alert if search input is empty when submitted
 alert("Please enter name of city.");
 e.preventDefault();
