@@ -109,20 +109,6 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${cityLat}&lon=${city
     var currentWindSpeed = $("#current-wind-speed");
     currentWindSpeed.text("Wind Speed: " + data.wind.speed + " MPH");
 
-    // add uv index to page
-    // var currentUvIndex = $("#current-uv-index");
-    // currentUvIndex.text("UV Index: ");
-    // var currentNumber = $("#current-number");
-    // currentNumber.text(data.current.uvi);
-
-    // add appropriate background color to current uv index number
-    // if (data.current.uvi <= 2) {
-    //     currentNumber.addClass("favorable");
-    // } else if (data.current.uvi >= 3 && data.current.uvi <= 7) {
-    //     currentNumber.addClass("moderate");
-    // } else {
-    //     currentNumber.addClass("severe");
-    // }
 })
 })
 .catch(function(err) {
@@ -195,7 +181,7 @@ e.preventDefault();
 // get name of city searched
 var cityName = $("#search-input").val();
 
-if (cityName === "" || cityName == null) {
+if (cityName === "") {
 //send alert if search input is empty when submitted
 alert("Please enter name of city.");
 e.preventDefault();

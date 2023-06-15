@@ -1,7 +1,7 @@
 /* all boxes on page */
 * {
     margin: 0;
-    padding: 0;
+    padding: 2px;
     box-sizing: border-box;
     font-family: Pangolin, 'Courier New', Courier, monospace;
 }
@@ -73,7 +73,13 @@
 /*  */
 .current-title-container {
     display: flex;
+    padding: 30px;    
 }
+
+.current-weather-title-spacer {
+    padding: 50px 0px 0px 0px; 
+}
+
 
 /*  */
 .current-title {
@@ -123,20 +129,36 @@
     backgound-color: red;
 }
 
-/*  */
+/* 5-Day Forecast title box */
 .future-forecast-container {
     margin: 5px 20px 0 20px;
+    background-color: white;
+    border-width: thin;
+    border-color: lightgrey;
+    border-style: solid;
+    border-radius: 3px;
+    margin: 0;
+    text-align: left;
+    width: 350px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+    
+    
 }
 
-/*  */
+/* under Forecast title box and above date */
 .future-forecast-title {
     font-size: 27px;
+    border-style: ridge;
+    
 }
 
 /*  */
 .future-card-details {
     width: 17%;
     padding: 7px 0 0 7px;
+    
 }
 
 /*  */
