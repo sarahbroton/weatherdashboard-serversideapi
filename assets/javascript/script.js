@@ -90,7 +90,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${cityLat}&lon=${city
 
     // add city name, date, and weather icon to current weather section title
     var currentTitle = $("#current-title");
-    var currentDay = moment().format("M/D/YYYY");
+    var currentDay = moment().format("M/D/YYYY"); 
     currentTitle.text(`${cityName} (${currentDay})`);
     var currentIcon = $("#current-weather-icon");
     currentIcon.addClass("current-weather-icon");
