@@ -160,7 +160,7 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${cityLat}&lon=${cit
     futureForecastTitle.text("5-Day Forecast:")
 
     // using data from response, set up each day of 5 day forecast
-    for (var i = 1; i <= data.list.length; i+=8) {
+    for (var i = 5; i <= data.list.length; i+=8) {
         // add class to future cards to create card containers
         var futureCard = $(".future-card");
         futureCard.addClass("future-card-details");
@@ -178,7 +178,7 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${cityLat}&lon=${cit
 
         // add temp to 5 day forecast
         var futureTemp = $("#future-temp-" + i);
-        futureTemp.text("Temp: " + data.list[i].temp.day + " \u00B0F");
+        futureTemp.text("Temp: " + data.list[i].temp + " \u00B0F");
 
         // add humidity to 5 day forecast
         var futureHumidity = $("#future-humidity-" + i);
