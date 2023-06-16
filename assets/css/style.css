@@ -7,10 +7,10 @@
 }
 
 .h1-container {
-    padding: 4px; 
-    background-image: linear-gradient(blue, rgb(89, 89, 92)); 
-    color: white; 
-    text-align:center;
+    padding: 4px;
+    background-image: linear-gradient(blue, rgb(89, 89, 92));
+    color: white;
+    text-align: center;
 }
 
 /* search for box + search button */
@@ -57,7 +57,7 @@
     line-height: 45px;
     padding: 0 20px;
     color: grey;
-  
+
 }
 
 /*  */
@@ -73,11 +73,11 @@
 /*  */
 .current-title-container {
     display: flex;
-    padding: 30px;    
+    padding: 30px;
 }
 
 .current-weather-title-spacer {
-    padding: 50px 0px 0px 0px; 
+    padding: 50px 0px 0px 0px;
 }
 
 
@@ -94,17 +94,19 @@
 }
 
 /*  */
-.current-temperature, .current-humidity, .current-wind-speed {
+.current-temperature,
+.current-humidity,
+.current-wind-speed {
     margin: 15px 20px;
     font-size: 20px;
 }
 
 /*  */
-.current-uv-index {
+/* .current-uv-index {
     font-size: 20px;
     display: inline;
     margin: 0 0 0 20px;
-}
+} */
 
 /*  */
 .current-number {
@@ -143,27 +145,37 @@
     height: 45px;
     line-height: 45px;
     padding: 0 20px;
- 
-    
+    display: flex;
+    flex-wrap: column wrap;
+
 }
+
+ .forecasts-cards-container {
+    flex-wrap: wrap; 
+    width: 95vw; 
+} 
+
 
 /* under Forecast title box and above date */
 /* .future-forecast title { */
-    #future-date-1,#future-date-2,#future-date-3,#future-date-4,#future-date-5  {
+#future-date-1,
+#future-date-2,
+#future-date-3,
+#future-date-4,
+#future-date-5 {
     font-size: 27px;
     border-style: ridge;
-    padding: 80px; 
-    display: flex; 
-    flex-wrap: column wrap; 
+    padding: 80px;
+    flex-wrap: column;
 
-    
+
 }
 
 /*  */
 .future-card-details {
     width: 17%;
     padding: 7px 0 0 7px;
-   
+
 }
 
 /*  */
@@ -179,7 +191,8 @@
 }
 
 /*  */
-.future-temp, .future-humidity {
+.future-temp,
+.future-humidity {
     font-size: 17px;
     font-weight: 200;
 }

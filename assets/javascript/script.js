@@ -166,6 +166,10 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${cityLat}&lon=${cit
         var futureTemp = $("#future-temp-" + i);
         futureTemp.text("Temp: " + data.list[i].temp + " \u00B0F");
 
+        // TO DO:  add wind speed to 5 day forecast
+        // var futureWindSpeed = $("#future-wind-speed" + i); 
+        // futureWindSpeed.text("Wind-Speed: " + data.list[i].windSpeed + )
+
         // add humidity to 5 day forecast
         var futureHumidity = $("#future-humidity-" + i);
         futureHumidity.text("Humidity: " + data.list[i].humidity + "%");
