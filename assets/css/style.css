@@ -143,14 +143,19 @@
     height: 45px;
     line-height: 45px;
     padding: 0 20px;
-    
+ 
     
 }
 
 /* under Forecast title box and above date */
-.future-forecast-title {
+/* .future-forecast title { */
+    #future-date-1,#future-date-2,#future-date-3,#future-date-4,#future-date-5  {
     font-size: 27px;
     border-style: ridge;
+    padding: 80px; 
+    display: flex; 
+    flex-wrap: column wrap; 
+
     
 }
 
@@ -158,7 +163,7 @@
 .future-card-details {
     width: 17%;
     padding: 7px 0 0 7px;
-    
+   
 }
 
 /*  */
