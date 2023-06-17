@@ -151,26 +151,24 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${cityLat}&lon=${cit
         // add class to future cards to create card containers
         var futureCard = $(".future-card");
         futureCard.addClass("future-card-details");
-        console.log(futureCard); 
+        // console.log(futureCard); 
 
         // add date to 5 day forecast
         var futureDate = $("#future-date-" + i);
         date = dayjs().add(i, "d").format("M/DD/YYYY"); 
         // date = moment().add(i, "d").format("M/D/YYYY");
         futureDate.text(date);
-        console.log(futureDate); 
 
         // add icon to 5 day forecast
         var futureIcon = $("#future-icon-" + i);
         futureIcon.addClass("future-icon");
         var futureIconCode = data.list[i].weather[0].icon;
         futureIcon.attr("src", `https://openweathermap.org/img/wn/${futureIconCode}@2x.png`);
-        console.log(futureIcon); 
 
         // add temp to 5 day forecast
         var futureTemp = $("#future-temp-" + i);
         futureTemp.text("Temp: " + data.list[i].temp + " \u00B0F");
-        console.log(futureTemp); 
+        // console.log(futureTemp); 
 
         // TO DO: add wind speed to 5 day forecast
         // var futureWindSpeed = $("#future-wind-speed" + i); 
@@ -179,7 +177,7 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${cityLat}&lon=${cit
         // add humidity to 5 day forecast
         var futureHumidity = $("#future-humidity-" + i);
         futureHumidity.text("Humidity: " + data.list[i].humidity + "%");
-        console.log(futureHumidity); 
+        // console.log(futureHumidity); 
     }
 })
 })
