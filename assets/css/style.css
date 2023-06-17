@@ -8,7 +8,7 @@
 
 .h1-container {
     padding: 4px;
-    background-image: linear-gradient(blue, rgb(89, 89, 92));
+    background-image: linear-gradient(rgb(110, 110, 184), rgb(89, 89, 92));
     color: white;
     text-align: center;
 }
@@ -128,7 +128,7 @@
 
 /*  */
 .severe {
-    backgound-color: red;
+    background-color: red;
 }
 
 /* 5-Day Forecast title box */
@@ -153,34 +153,18 @@
  .forecasts-cards-container {
     flex-wrap: wrap; 
     width: 95vw; 
+    background-color: aquamarine;
 } 
 
 
 /* under Forecast title box and above date */
 /* .future-forecast title { */
-#future-date-1,
-#future-date-2,
-#future-date-3,
-#future-date-4,
-#future-date-5 {
+.future-card { 
     font-size: 27px;
     border-style: ridge;
     padding: 80px;
     flex-wrap: column;
-
-
-}
-
-/*  */
-.future-card-details {
-    width: 17%;
-    padding: 7px 0 0 7px;
-
-}
-
-/*  */
-.future-date {
-    font-size: 23px;
+    background-color: slategray; 
 }
 
 /*  */
@@ -188,6 +172,7 @@
     width: 50px;
     height: 50px;
     margin: 0 0 0 15px;
+   
 }
 
 /*  */
@@ -195,6 +180,7 @@
 .future-humidity {
     font-size: 17px;
     font-weight: 200;
+
 }
 
 
