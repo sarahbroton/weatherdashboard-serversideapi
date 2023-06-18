@@ -102,33 +102,11 @@
 }
 
 /*  */
-/* .current-uv-index {
-    font-size: 20px;
-    display: inline;
-    margin: 0 0 0 20px;
-} */
-
-/*  */
 .current-number {
     font-size: 20px;
     display: inline;
     color: white;
     padding: 5px 10px;
-}
-
-/*  */
-.favorable {
-    background-color: green;
-}
-
-/*  */
-.moderate {
-    background-color: yellow;
-}
-
-/*  */
-.severe {
-    background-color: red;
 }
 
 /* 5-Day Forecast title box */
@@ -176,6 +154,7 @@
 
 /*  */
 .future-temp,
+.future-wind-speed, 
 .future-humidity {
     font-size: 17px;
     font-weight: 200;

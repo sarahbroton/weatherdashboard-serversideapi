@@ -162,18 +162,18 @@ var currentWeatherSection = function (cityName) {
 
                   // add temp to 5 day forecast
                   var futureTemp = $(`#future-temp-${[i]}`);
-                  futureTemp.text("Temp: " + data.list[i].main.temp + "\u00B0F");
+                  futureTemp.text("Temperature: " + data.list[i].main.temp + " \u00B0F");
                   console.log(futureTemp);
                   // console.log(futureTemp);
 
-                  // TO DO: add wind speed to 5 day forecast
-                  // var futureWindSpeed = $("#future-wind-speed" + i);
-                  // futureWindSpeed.text("Wind-Speed: " + data.list[i].windSpeed + )
+                  // add wind speed to 5 day forecast
+                  var futureWindSpeed = $(`#future-wind-speed-${[i]}`);
+                  futureWindSpeed.text("Wind Speed: " + data.list[i].wind.speed + " MPH"); 
 
                   // add humidity to 5 day forecast
                   var futureHumidity = $(`#future-humidity-${[i]}`);
                   futureHumidity.text(
-                    "Humidity: " + data.list[i].main.humidity + "%"
+                    "Humidity: " + data.list[i].main.humidity + " %"
                   );
                   // console.log(futureHumidity);
                 }
