@@ -122,8 +122,7 @@ var currentWeatherSection = function (cityName) {
       };
       var fiveDayForecastSection = function (cityName) {
         // get and use data from open weather current weather api end point
-        fetch(https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}
-        )
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`)
           // get response and turn it into objects
           .then(function (response) {
             console.log(response);
@@ -133,9 +132,7 @@ var currentWeatherSection = function (cityName) {
             // get city's longitude and latitude
             var cityLon = data.coord.lon;
             var cityLat = data.coord.lat;
-            fetch(
-              https://api.openweathermap.org/data/2.5/forecast?lat=${cityLat}&lon=${cityLon}&exclude=minutely,hourly,alerts&units=imperial&appid=${apiKey}
-            )
+            fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${cityLat}&lon=${cityLon}&exclude=minutely,hourly,alerts&units=imperial&appid=${apiKey}`)
               // get response from one call api and turn it into objects
               .then(function (response) {
                 return response.json();
@@ -158,17 +155,14 @@ var currentWeatherSection = function (cityName) {
                   // date = moment().add(i, "d").format("M/D/YYYY");
                   futureDate.text(date);
                   // add icon to 5 day forecast
-                  var futureIcon = $(#future-icon-${[i]});
+                  var futureIcon = $(`#future-icon-${[i]}`);
                   futureIcon.addClass("future-icon");
                   var futureIconCode = data.list[i].weather[0].icon;
-                  futureIcon.attr(
-                    "src",
-                    https://openweathermap.org/img/wn/${futureIconCode}@2x.png
-                  );
+                  futureIcon.attr("src", `https://openweathermap.org/img/wn/${futureIconCode}@2x.png`);
 
                   // add temp to 5 day forecast
-                  var futureTemp = $(#future-temp-${[i]});
-                  futureTemp.text(`Temp: " + data.list[i].main.temp + " \u00B0F``);
+                  var futureTemp = $(`#future-temp-${[i]}`);
+                  futureTemp.text("Temp: " + data.list[i].main.temp + "\u00B0F");
                   console.log(futureTemp);
                   // console.log(futureTemp);
 
@@ -177,7 +171,7 @@ var currentWeatherSection = function (cityName) {
                   // futureWindSpeed.text("Wind-Speed: " + data.list[i].windSpeed + )
 
                   // add humidity to 5 day forecast
-                  var futureHumidity = $(#future-humidity-${[i]});
+                  var futureHumidity = $(`#future-humidity-${[i]}`);
                   futureHumidity.text(
                     "Humidity: " + data.list[i].main.humidity + "%"
                   );
