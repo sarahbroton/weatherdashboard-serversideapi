@@ -103,7 +103,7 @@ var currentWeatherSection = function (cityName) {
 
                     // add current humidity to page
                     var currentHumidity = $("#current-humidity");
-                    currentHumidity.text("Humidity: " + data.main.humidity + "%");
+                    currentHumidity.text("Humidity: " + data.main.humidity + " %");
 
                     // add current wind speed to page
                     var currentWindSpeed = $("#current-wind-speed");

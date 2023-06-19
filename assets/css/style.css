@@ -6,11 +6,13 @@
     font-family: Pangolin, 'Courier New', Courier, monospace;
 }
 
+/* nav bar "box"  */
 .h1-container {
     padding: 4px;
     background-image: linear-gradient(rgb(110, 110, 184), rgb(89, 89, 92));
     color: white;
     text-align: center;
+    
 }
 
 /* search for box + search button */
@@ -41,6 +43,7 @@
 /*  */
 .search-history-container {
     padding: 10px;
+    
 }
 
 /*  */
