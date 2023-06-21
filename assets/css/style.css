@@ -12,10 +12,27 @@
     background-image: linear-gradient(rgb(110, 110, 184), rgb(89, 89, 92));
     color: white;
     text-align: center;
-
-.h2
-    
+   
 }
+
+.main-container{
+    display: flex; 
+}
+
+.left-container {
+    display: flex; 
+    width: 25%; 
+    background-color: purple; 
+    height: 40px; 
+}
+
+.right-container{
+    display: flex; 
+    width: 75%; 
+    background-color: aqua; 
+    height: 40px; 
+}
+
 
 /* search for box + search button */
 .form-container {
@@ -48,6 +65,10 @@
     
 }
 
+.search-container{
+    height: 80px; 
+}
+
 /*  */
 .past-search {
     background-color: white;
@@ -72,7 +93,7 @@
     border-style: solid;
     border-radius: 3px;
     margin: 20px 0 0 20px;
-    padding: 0 0 12px 0;
+    padding: 0 0 12px 0px;
 }
 
 /*  */

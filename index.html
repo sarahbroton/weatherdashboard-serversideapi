@@ -20,10 +20,14 @@
     </header>
 
     <main class="main">
+        <div class="main-container">
+        <div class="left-container"></div>
+        <div class="right-container"></div>
+        </div>
         <div class="container-fluid">
             <div class="row page-content">
 <!--column 1 --> 
-                                <div class="col-sm-12 bg-light p-0">
+                                <div class="search-container col-sm-4 bg-light p-0">
                     <!-- search form -->
                     <div class="form-container">
                         <form id="search-form">
@@ -42,29 +46,31 @@
                     </div>
                     </form>
                 </div>
-
-                <div class="past-search">RECENT SEARCHES                    
-                    <div id="search-history-container" class="row m-0 search-history-container">
+                <div id="current-weather-title-spacer">Current Weather</div>
+                <div id="current weather-container" class="row d-block">
+                <div class="current-title-container"> 
+                    <h2 id="current-title" class="current-title d-inline"></h2> 
+                    <img id="current-weather-icon" class="d-inline" src="" alt="">
                 </div>
+                <!-- current stats -->
+                <p class="current-temperature" id="current-temperature"></p>
+                <p class="current-humidity" id="current-humidity"></p>
+                <p class="current-wind-speed" id="current-wind-speed"></p>
+                <!-- <p class="current-uv-index" id="current-uv-index"></p> -->
+                <p class="current-number rounded" 
+                
+                id="current-number"></p>
+    
+
             </div>
     </main>
 
     <!-- current weather conditions -->
     <div class="col-sm-8 p-0">
-            <div id="current-weather-title-spacer">Current Weather</div>
-            <div id="current weather-container" class="row d-block">
-            <div class="current-title-container"> 
-                <h2 id="current-title" class="current-title d-inline"></h2> 
-                <img id="current-weather-icon" class="d-inline" src="" alt="">
-            </div>
-            <!-- current stats -->
-            <p class="current-temperature" id="current-temperature"></p>
-            <p class="current-humidity" id="current-humidity"></p>
-            <p class="current-wind-speed" id="current-wind-speed"></p>
-            <!-- <p class="current-uv-index" id="current-uv-index"></p> -->
-            <p class="current-number rounded" 
-            
-            id="current-number"></p>
+        <div class="past-search">RECENT SEARCHES                    
+            <div id="search-history-container" class="row m-0  search-history-container">
+        </div>
+
         </div>
 
 
