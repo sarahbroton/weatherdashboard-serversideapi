@@ -181,7 +181,7 @@ var currentWeatherSection = function (cityName) {
           });
       };
       // called when the search form is submitted
-      $("#search-form").on("submit", function (e) {
+      $("#search-btn").on("click", function (e) {
         e.preventDefault();
         // get name of city searched
         var cityName = $("#search-input").val();

@@ -11,71 +11,87 @@
     background-image: linear-gradient(rgb(110, 110, 184), rgb(89, 89, 92));
     color: white;
     text-align: center;
-    font-size: 5vw; 
-     
+    font-size: 5vw;
+
 }
 
-nav bar "box" 
-.h1-container {
-    padding: 4px;
-    background-image: linear-gradient(rgb(110, 110, 184), rgb(89, 89, 92));
-    color: white;
-    text-align: center;
-   
-}
-
-.main-container{
-    display: flex; 
+.main-container {
+    display: flex;
 }
 
 .left-container {
+    display: flex;
+    background-color: purple; 
+}
+
+.right-container {
+    margin: 0px 0px 0px 20px; 
+    width: 68%;
+    background-color: aqua; 
+}
+
+.five-days .five-day-cards {
+    display: flex; 
+    width: 100%; 
+}
+
+/* .left-container {
     display: flex; 
     width: 25%; 
     background-color: purple; 
     height: 40px; 
-}
+} */
 
-.right-container{
+/* .right-container{
     display: flex; 
     width: 75%; 
     background-color: aqua; 
     height: 40px; 
-}
+} */
 
 
 /* search for box + search button */
-.form-container {
+/* .form-container {
     padding: 10px;
-}
+    
+} */
 
 /* "search for your favorite city"  text only */
-.search-label {
+/* .search-label {
     font-size: 20px;
     font-weight: 600;
-}
+    
+} */
 
-/* search input box only  */
-.search-input {
+/* search input box only 
+.h2, .search-input {
     width: 100%;
     height: 40px;
     border-color: lightgrey;
     border-width: thin;
     padding: 0 15px;
-}
+} */
 
 /* search button only  */
-.search-button {
+.search-btn {
     padding: 10px 15px;
+    background-color: blue;
+    border: none; 
+    color: white; 
+    text-align: center; 
+    text-decoration: none; 
+    font-size: 16px; 
+
 }
 
 /*  */
 .search-history-container {
     padding: 10px;
-    
+
 }
 
-.search-container{
-    height: 80px; 
+.search-container {
+    height: 80px;
 }
 
 /*  */
@@ -113,7 +129,7 @@ nav bar "box"
 
 .current-weather-title-spacer {
     padding: 50px 0px 0px 0px;
-    
+
 }
 
 
@@ -164,20 +180,20 @@ nav bar "box"
 
 }
 
- .forecasts-cards-container {
-    flex-wrap: wrap; 
-    width: 95vw; 
-} 
+.forecasts-cards-container {
+    flex-wrap: wrap;
+    width: 95vw;
+}
 
 
 /* under Forecast title box and above date */
 /* .future-forecast title { */
-.future-card { 
+.future-card {
     font-size: 27px;
     border-style: ridge;
     padding: 80px;
     flex-wrap: column;
-    background-color: slategray; 
+    background-color: slategray;
 }
 
 /*  */
@@ -185,12 +201,12 @@ nav bar "box"
     width: 50px;
     height: 50px;
     margin: 0 0 0 15px;
-   
+
 }
 
 /*  */
 .future-temp,
-.future-wind-speed, 
+.future-wind-speed,
 .future-humidity {
     font-size: 17px;
     font-weight: 200;
@@ -201,5 +217,3 @@ nav bar "box"
 /* css identifier */
 /* outline: 3px solid limegreen !important;
 background rgba (1, 151, 0, 0.1) !important; */
-
-
