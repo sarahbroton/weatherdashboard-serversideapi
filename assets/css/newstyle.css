@@ -30,9 +30,12 @@
     background-color: aqua; 
 }
 
-.five-days .five-day-cards {
+ .five-days .five-day-cards {
     display: flex; 
     width: 100%; 
+    justify-content: space-around; 
+   
+    
 }
 
 /* .left-container {
@@ -73,9 +76,11 @@
 } */
 
 /* search button only  */
+/* if time = would like button to be blue with whtie text, like nav bar */
 .search-btn {
     padding: 10px 15px;
-    background-color: blue;
+    background-image: linear-gradient(rgb(110, 110, 184), rgb(89, 89, 92));
+    color: white;
     border: none; 
     color: white; 
     text-align: center; 
@@ -84,7 +89,7 @@
 
 }
 
-/*  */
+/* 
 .search-history-container {
     padding: 10px;
 
@@ -92,7 +97,8 @@
 
 .search-container {
     height: 80px;
-}
+   
+} */
 
 /*  */
 .past-search {
@@ -191,9 +197,12 @@
 .future-card {
     font-size: 27px;
     border-style: ridge;
-    padding: 80px;
+    /* padding: 80px; */
     flex-wrap: column;
     background-color: slategray;
+    min-width: 250px; 
+    min-height: 250px;
+    flex-grow: inherit;  
 }
 
 /*  */
@@ -215,5 +224,7 @@
 
 
 /* css identifier */
-/* outline: 3px solid limegreen !important;
-background rgba (1, 151, 0, 0.1) !important; */
+/* 
+outline: 3px solid limegreen !important;
+background rgba (1, 151, 0, 0.1) !important; 
+*/

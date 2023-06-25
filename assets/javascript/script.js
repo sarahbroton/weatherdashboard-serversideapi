@@ -2,11 +2,11 @@ var apiKey = "aa5e670bb5114654ea08830ff27af01a"
 var savedSearches = [];
 var cityName;
 var savedSearchHistory;
-
+console.log("cityName"); 
 
 // previous searches
-var searchHistoryList = function (cityName) {
-    $('.past-search:contains("' + cityName + '")').remove();
+var searchHistoryList = function (cityName) { console.log("searchHistoryList"); 
+    // $('.history-btns:contains("' + cityName + '")').remove();
 
     // CITY NAME ENTER TEXT
     var searchHistoryEntry = $("<p>")
@@ -14,15 +14,15 @@ var searchHistoryList = function (cityName) {
     searchHistoryEntry.text(cityName);
 
     // entry box
-    var searchEntryContainer = $("<div>");
-    searchEntryContainer.addClass("past-search-container");
+    // var searchEntryContainer = $("<div>");
+    // searchEntryContainer.addClass("past-search-container");
 
-    // add entry
-    searchEntryContainer.append(searchHistoryEntry);
+    // // add entry
+    // searchEntryContainer.append(searchHistoryEntry);
 
     // add entry to search history
-    var searchHistoryContainerEL = $("#search-history-container");
-    searchHistoryContainerEL.append(searchEntryContainer);
+    var searchHistoryContainerEL = $(".history-btns");
+    searchHistoryContainerEL.append(searchHistoryEntry);
 
     if (savedSearches.length > 0) {
         var previousSavedSearches = localStorage.getItem("savedSearches");
@@ -30,9 +30,11 @@ var searchHistoryList = function (cityName) {
     }
 
     // add city to saved
+    if (!savedSearches.includes(cityName))  {
     savedSearches.push(cityName);
     localStorage.setItem("savedSearches", JSON.stringify(savedSearches));
 
+    }
     // reset
     $('#search-input').val("");
 
@@ -40,14 +42,15 @@ var searchHistoryList = function (cityName) {
 
 // saved history to search
 var loadSearchHistory = function () {
+    console.log("loadSearchHistory"); 
     var savedSearchHistory = localStorage.getItem("savedSearches");
-    savedSearches = JSON.parse(savedSearchHistory);
-
+    var savedSearches = JSON.parse(savedSearchHistory);
+    
 
     // if no previous searches
     if (!savedSearchHistory) {
-        // console.log("no search history"); 
-        // return false; 
+        console.log("no search history"); 
+        return; 
     }
 
     // if (savedSearchHistory) {
@@ -58,8 +61,10 @@ var loadSearchHistory = function () {
     // savedSearchHistory(); 
     // savedSearchHistory = parseInt(savedSearchHistory); 
 
+    console.log(savedSearches); 
     for (var i = 0; i < savedSearches.length; i++) {
         searchHistoryList(savedSearches[i]);
+        console.log(i); 
     }
 
 };
@@ -196,7 +201,7 @@ var currentWeatherSection = function (cityName) {
         }
       });
       // called when a search history entry is clicked
-      $("#search-history-container").on("click", "p", function () {
+      $("#search-history").on("click", "p", function () {
         // get text (city name) of entry and pass it as a parameter to display weather conditions
         var previousCityName = $(this).text();
         currentWeatherSection(previousCityName);
@@ -205,4 +210,4 @@ var currentWeatherSection = function (cityName) {
           var previousCityClicked = $(this);
         previousCityClicked.remove();
       });
-      // loadSearchHistory();
+      loadSearchHistory();
