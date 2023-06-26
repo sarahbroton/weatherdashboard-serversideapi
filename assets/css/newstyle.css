@@ -228,3 +228,8 @@
 outline: 3px solid limegreen !important;
 background rgba (1, 151, 0, 0.1) !important; 
 */
+@media screen and (max-width: 2020px) {
+    .five-day-cards {
+      flex-direction: column; 
+  
+    }}
