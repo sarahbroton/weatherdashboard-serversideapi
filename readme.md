@@ -83,8 +83,8 @@ This project is licensed under the terms as the MIT licence found in GitHub.
 
 ## Mock-up (Screenshot)
 The following image shows the web application's appearance and functionality.
-![image](https://github.com/sarahbroton/weatherdashboard-serversideapi/assets/130716239/b39e53c0-6a8e-4627-a132-2239b102e761)
+![image](https://github.com/sarahbroton/weatherdashboard-serversideapi/assets/130716239/abb2e6c5-30d2-4b08-880b-b2bcc2782a64)
 
 ## Link
 
-<!-- ENTER LINK HERE -->
+https://sarahbroton.github.io/weatherdashboard-serversideapi/

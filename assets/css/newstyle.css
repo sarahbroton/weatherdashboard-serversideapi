@@ -21,21 +21,20 @@
 /* LEFT CONTAINER */
 .left-container {
     display: flex;
-    background-color: purple; 
+    background-color: rgb(185, 184, 187); 
 }
 /* RIGHT CONTAINER */
 .right-container {
     margin: 0px 0px 0px 20px; 
     width: 68%;
-    background-color: aqua; 
+   
 }
 /* FIVE DAY FORECAST CARDS */
  .five-days .five-day-cards {
     display: flex; 
     width: 100%; 
     justify-content: flex-start; 
-   
-    
+       
 }
 
 /* search button only  */
@@ -86,12 +85,6 @@
     padding: 30px;
 }
 
-/* .current-weather-title-spacer {
-    padding: 50px 0px 0px 0px;
-
-} */
-
-
 /*  */
 .current-title {
     font-size: 40px;
@@ -138,12 +131,6 @@
     flex-wrap: column wrap;
 
 }
-
-/* .forecasts-cards-container {
-    flex-wrap: wrap;
-    width: 95vw;
-} */
-
 
 /* under Forecast title box and above date */
 /* .future-forecast title { */

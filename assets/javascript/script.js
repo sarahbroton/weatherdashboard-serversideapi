@@ -2,26 +2,18 @@ var apiKey = "aa5e670bb5114654ea08830ff27af01a"
 var savedSearches = [];
 var cityName;
 var savedSearchHistory;
+var input = document.getElementById("search-input");
 console.log("cityName");
 
 // previous searches
 var searchHistoryList = function (cityName) {
   console.log("searchHistoryList");
-  // $('.history-btns:contains("' + cityName + '")').remove();
 
   // CITY NAME ENTER TEXT
   var searchHistoryEntry = $("<p>")
   searchHistoryEntry.addClass("past-search");
   searchHistoryEntry.text(cityName);
 
-  // entry box
-  // var searchEntryContainer = $("<div>");
-  // searchEntryContainer.addClass("past-search-container");
-
-  // // add entry
-  // searchEntryContainer.append(searchHistoryEntry);
-
-  // add entry to search history
   var searchHistoryContainerEL = $(".history-btns");
   searchHistoryContainerEL.append(searchHistoryEntry);
 
@@ -34,11 +26,9 @@ var searchHistoryList = function (cityName) {
   if (!savedSearches.includes(cityName)) {
     savedSearches.push(cityName);
     localStorage.setItem("savedSearches", JSON.stringify(savedSearches));
-
   }
   // reset
   $('#search-input').val("");
-
 };
 
 // saved history to search
@@ -53,14 +43,6 @@ var loadSearchHistory = function () {
     console.log("no search history");
     return;
   }
-
-  // if (savedSearchHistory) {
-  //     savedSearchHistory = []; 
-  // }
-
-
-  // savedSearchHistory(); 
-  // savedSearchHistory = parseInt(savedSearchHistory); 
 
   console.log(savedSearches);
   for (var i = 0; i < savedSearches.length; i++) {
@@ -181,7 +163,6 @@ var fiveDayForecastSection = function (cityName) {
             futureHumidity.text(
               "Humidity: " + data.list[i].main.humidity + " %"
             );
-            // console.log(futureHumidity);
           }
         });
     });
@@ -201,16 +182,16 @@ $("#search-btn").on("click", function (e) {
     fiveDayForecastSection(cityName);
   }
 });
-// //TO DO:  event listener for the enter key when used in the search field}
-// input.addEventListener("keypress", function (event)) {
-//   if (event.key === "Enter")
-//     event.preventDefault();
-//   document.getElementById("search-btn").click();
-// }
+// //event listener for the enter key when used in the search field}
+input.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    $("#search-btn").click();
+  }
+})
 
 
 // called when a search history entry is clicked
-$("#search-history").on("click", "p", function () {
+$(".history-btns").on("click", "p", function () {
   // get text (city name) of entry and pass it as a parameter to display weather conditions
   var previousCityName = $(this).text();
   currentWeatherSection(previousCityName);
@@ -223,7 +204,6 @@ loadSearchHistory();
 
 
 
-      // IF TIME: to do's:
-      // 1.  add event listener for the enter button when using the search field
-      // 2.  output cityName with first letter capital (regarless of how the cityName is entered into field)
-      // 3.  
+      // IF TIME & future: to do's:
+      // 1. output cityName with first letter capital (regarless of how the cityName is entered into field)
+
