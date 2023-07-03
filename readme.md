@@ -5,7 +5,7 @@
 Using this swift and responsive app will help you to get the weather from your favorite places in a jif. You will be able to know quickly and efficiently what the weather will be like so you can decide if you should bring a coat or a swimsuit. You will, also, see into the future weather forecast (5-days into the future) to assist in any short-term trips you will want to plan.  Hope you enjoy! 
 
 - Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL
-- Developers are often taksed wtih retrieving data from another application's API and using it in the context of their own
+- Developers are often tasked wtih retrieving data from another application's API and using it in the context of their own
 - This project is to build a weather dashboard that will run in the browser and feature dynamicaly updated HTML and CSS
 - This project was created/built to practice and increase my skill in third-party api's, github, html, css, javascript, and how to use local storage
 

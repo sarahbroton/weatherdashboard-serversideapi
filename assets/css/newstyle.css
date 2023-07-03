@@ -5,7 +5,7 @@
     box-sizing: border-box;
     font-family: Pangolin, 'Courier New', Courier, monospace;
 }
-
+/* NAV BAR */
 .nav {
     padding: 20px;
     background-image: linear-gradient(rgb(110, 110, 184), rgb(89, 89, 92));
@@ -14,66 +14,29 @@
     font-size: 5vw;
 
 }
-
+/* BODY OF PAGE MINUS NAV BAR */
 .main-container {
     display: flex;
 }
-
+/* LEFT CONTAINER */
 .left-container {
     display: flex;
     background-color: purple; 
 }
-
+/* RIGHT CONTAINER */
 .right-container {
     margin: 0px 0px 0px 20px; 
     width: 68%;
     background-color: aqua; 
 }
-
+/* FIVE DAY FORECAST CARDS */
  .five-days .five-day-cards {
     display: flex; 
     width: 100%; 
-    justify-content: space-around; 
+    justify-content: flex-start; 
    
     
 }
-
-/* .left-container {
-    display: flex; 
-    width: 25%; 
-    background-color: purple; 
-    height: 40px; 
-} */
-
-/* .right-container{
-    display: flex; 
-    width: 75%; 
-    background-color: aqua; 
-    height: 40px; 
-} */
-
-
-/* search for box + search button */
-/* .form-container {
-    padding: 10px;
-    
-} */
-
-/* "search for your favorite city"  text only */
-/* .search-label {
-    font-size: 20px;
-    font-weight: 600;
-    
-} */
-
-/* search input box only 
-.h2, .search-input {
-    width: 100%;
-    height: 40px;
-    border-color: lightgrey;
-    border-width: thin;
-    padding: 0 15px;
-} */
 
 /* search button only  */
 /* if time = would like button to be blue with whtie text, like nav bar */
@@ -89,18 +52,8 @@
 
 }
 
-/* 
-.search-history-container {
-    padding: 10px;
 
-}
-
-.search-container {
-    height: 80px;
-   
-} */
-
-/*  */
+/*SEARCH HISTORY | LEFT CONTAINER  */
 .past-search {
     background-color: white;
     border-width: thin;
@@ -117,7 +70,7 @@
 
 }
 
-/*  */
+/* CURRENT WEATHER | RIGHT CONTAINER */
 .current-weather-container {
     border-color: lightgrey;
     border-width: thin 0 thin thin;
@@ -133,10 +86,10 @@
     padding: 30px;
 }
 
-.current-weather-title-spacer {
+/* .current-weather-title-spacer {
     padding: 50px 0px 0px 0px;
 
-}
+} */
 
 
 /*  */
@@ -186,10 +139,10 @@
 
 }
 
-.forecasts-cards-container {
+/* .forecasts-cards-container {
     flex-wrap: wrap;
     width: 95vw;
-}
+} */
 
 
 /* under Forecast title box and above date */
@@ -222,14 +175,14 @@
 
 }
 
-
-/* css identifier */
-/* 
-outline: 3px solid limegreen !important;
-background rgba (1, 151, 0, 0.1) !important; 
-*/
 @media screen and (max-width: 2020px) {
     .five-day-cards {
       flex-direction: column; 
   
     }}
+
+    /* css identifier */
+/* 
+outline: 3px solid limegreen !important;
+background rgba (1, 151, 0, 0.1) !important; 
+*/
