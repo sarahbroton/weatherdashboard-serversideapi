@@ -86,5 +86,5 @@ The following image shows the web application's appearance and functionality.
 ![image](https://github.com/sarahbroton/weatherdashboard-serversideapi/assets/130716239/abb2e6c5-30d2-4b08-880b-b2bcc2782a64)
 
 ## Link
-
+https://sarahbroton.github.io/weatherdashboard-serversideapi/
 
